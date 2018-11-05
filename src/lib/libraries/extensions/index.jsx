@@ -193,5 +193,25 @@ export default [
         ),
         helpLink: 'https://scratch.mit.edu/wedo'
 
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Zach's Test"
+                description="Name for my text extension"
+                id="gui.extension.test.name"
+            />
+        ),
+        extensionId: 'test',
+        iconURL: text2speechImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Testing my ability to code"
+                description="Description for the test extension"
+                id="gui.extension.test.description"
+            />
+        ),
+        featured: true
     }
+
 ];
