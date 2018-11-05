@@ -122,7 +122,9 @@ class ActionMenu extends React.Component {
                     data-for={this.mainTooltipId}
                     data-tip={mainTitle}
                     ref={this.setButtonRef}
+
                     onClick={this.clickDelayer(onClick)}
+
                 >
                     <img
                         className={styles.mainIcon}

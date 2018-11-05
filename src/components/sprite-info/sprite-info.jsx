@@ -15,8 +15,6 @@ import styles from './sprite-info.css';
 
 import xIcon from './icon--x.svg';
 import yIcon from './icon--y.svg';
-import showIcon from './icon--show.svg';
-import hideIcon from './icon--hide.svg';
 
 const BufferedInput = BufferedInputHOC(Input);
 
@@ -72,7 +70,7 @@ class SpriteInfo extends React.Component {
         const spriteNameInput = (
             <BufferedInput
                 className={styles.spriteInput}
-                disabled={this.props.disabled}
+                disabled="true"
                 placeholder={this.props.intl.formatMessage(messages.spritePlaceholder)}
                 tabIndex="0"
                 type="text"
@@ -97,7 +95,7 @@ class SpriteInfo extends React.Component {
                 <Label text="x">
                     <BufferedInput
                         small
-                        disabled={this.props.disabled}
+                        disabled="true"
                         placeholder="x"
                         tabIndex="0"
                         type="text"
@@ -124,7 +122,7 @@ class SpriteInfo extends React.Component {
                 <Label text="y">
                     <BufferedInput
                         small
-                        disabled={this.props.disabled}
+                        disabled="true"
                         placeholder="y"
                         tabIndex="0"
                         type="text"
@@ -153,92 +151,6 @@ class SpriteInfo extends React.Component {
 
         return (
             <Box className={styles.spriteInfo}>
-                <div className={classNames(styles.row, styles.rowPrimary)}>
-                    <div className={styles.group}>
-                        <Label text={sprite}>
-                            {spriteNameInput}
-                        </Label>
-                    </div>
-                    {xPosition}
-                    {yPosition}
-                </div>
-                <div className={classNames(styles.row, styles.rowSecondary)}>
-                    <div className={styles.group}>
-                        {
-                            stageSize === STAGE_DISPLAY_SIZES.large ?
-                                <Label
-                                    secondary
-                                    text={showLabel}
-                                /> :
-                                null
-                        }
-                        <div className={styles.radioWrapper}>
-                            <div
-                                className={classNames(
-                                    styles.radio,
-                                    styles.radioFirst,
-                                    styles.iconWrapper,
-                                    {
-                                        [styles.isActive]: this.props.visible && !this.props.disabled,
-                                        [styles.isDisabled]: this.props.disabled
-                                    }
-                                )}
-                                tabIndex="0"
-                                onClick={this.props.onClickVisible}
-                                onKeyPress={this.props.onPressVisible}
-                            >
-                                <img
-                                    className={styles.icon}
-                                    src={showIcon}
-                                />
-                            </div>
-                            <div
-                                className={classNames(
-                                    styles.radio,
-                                    styles.radioLast,
-                                    styles.iconWrapper,
-                                    {
-                                        [styles.isActive]: !this.props.visible && !this.props.disabled,
-                                        [styles.isDisabled]: this.props.disabled
-                                    }
-                                )}
-                                tabIndex="0"
-                                onClick={this.props.onClickNotVisible}
-                                onKeyPress={this.props.onPressNotVisible}
-                            >
-                                <img
-                                    className={styles.icon}
-                                    src={hideIcon}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className={classNames(styles.group, styles.largerInput)}>
-                        <Label
-                            secondary
-                            text={sizeLabel}
-                        >
-                            <BufferedInput
-                                small
-                                disabled={this.props.disabled}
-                                label={sizeLabel}
-                                tabIndex="0"
-                                type="text"
-                                value={this.props.disabled ? '' : this.props.size}
-                                onSubmit={this.props.onChangeSize}
-                            />
-                        </Label>
-                    </div>
-                    <div className={classNames(styles.group, styles.largerInput)}>
-                        <DirectionPicker
-                            direction={this.props.direction}
-                            disabled={this.props.disabled}
-                            rotationStyle={this.props.rotationStyle}
-                            onChangeDirection={this.props.onChangeDirection}
-                            onChangeRotationStyle={this.props.onChangeRotationStyle}
-                        />
-                    </div>
-                </div>
             </Box>
         );
     }

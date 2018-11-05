@@ -8,6 +8,9 @@ import StopAll from '../stop-all/stop-all.jsx';
 import TurboMode from '../turbo-mode/turbo-mode.jsx';
 
 import styles from './controls.css';
+import spriteIcon from '../action-menu/icon--sprite.svg';
+import RtlLocales from '../../lib/rtl-locales';
+import ActionMenu from '../action-menu/action-menu.jsx';
 
 const messages = defineMessages({
     goTitle: {
@@ -19,7 +22,14 @@ const messages = defineMessages({
         id: 'gui.controls.stop',
         defaultMessage: 'Stop',
         description: 'Stop button title'
+    },
+    addTitle: {
+
+        id: 'gui.controls.add',
+        defaultMessage: 'Add',
+        description: 'Add button title'
     }
+
 });
 
 const Controls = function (props) {
@@ -47,6 +57,12 @@ const Controls = function (props) {
                 title={intl.formatMessage(messages.stopTitle)}
                 onClick={onStopAllClick}
             />
+            <ActionMenu
+                className={styles.addButton}
+                img={spriteIcon}
+                title={intl.formatMessage(messages.addTitle)}
+                tooltipPlace={RtlLocales.indexOf(intl.locale) === -1 ? 'left' : 'right'}
+            />
             {turbo ? (
                 <TurboMode />
             ) : null}
@@ -61,6 +77,7 @@ Controls.propTypes = {
     onGreenFlagClick: PropTypes.func.isRequired,
     onStopAllClick: PropTypes.func.isRequired,
     turbo: PropTypes.bool
+
 };
 
 Controls.defaultProps = {

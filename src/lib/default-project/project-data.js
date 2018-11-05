@@ -11,6 +11,11 @@ let messages = defineMessages({
         defaultMessage: 'my variable',
         description: 'Name for the default variable',
         id: 'gui.defaultProject.variable'
+    },
+    testVariable: {
+        defaultMessage: 'other variable',
+        description: 'Name for the default variable',
+        id: 'gui.defaultProject.testVariable'
     }
 });
 
@@ -35,7 +40,8 @@ const projectData = translateFunction => {
                     '`jEk@4|i[#Fk?(8x)AV.-my variable': [
                         translator(messages.variable),
                         0
-                    ]
+                    ],
+                    'Testing how to make another variable': [translator(messages.testVariable), 12]
                 },
                 lists: {},
                 broadcasts: {},
@@ -51,69 +57,11 @@ const projectData = translateFunction => {
                         rotationCenterY: 180
                     }
                 ],
-                sounds: [
-                    {
-                        assetId: '83a9787d4cb6f3b7632b4ddfebf74367',
-                        name: translator(messages.pop),
-                        dataFormat: 'wav',
-                        format: '',
-                        rate: 11025,
-                        sampleCount: 258,
-                        md5ext: '83a9787d4cb6f3b7632b4ddfebf74367.wav'
-                    }
-                ],
+                sounds: [],
                 volume: 100,
                 tempo: 60,
                 videoTransparency: 50,
                 videoState: 'off'
-            },
-            {
-                isStage: false,
-                name: translator(messages.sprite, {index: 1}),
-                variables: {},
-                lists: {},
-                broadcasts: {},
-                blocks: {},
-                currentCostume: 0,
-                costumes: [
-                    {
-                        assetId: '09dc888b0b7df19f70d81588ae73420e',
-                        name: translator(messages.costume, {index: 1}),
-                        bitmapResolution: 1,
-                        md5ext: '09dc888b0b7df19f70d81588ae73420e.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 47,
-                        rotationCenterY: 55
-                    },
-                    {
-                        assetId: '3696356a03a8d938318876a593572843',
-                        name: translator(messages.costume, {index: 2}),
-                        bitmapResolution: 1,
-                        md5ext: '3696356a03a8d938318876a593572843.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 47,
-                        rotationCenterY: 55
-                    }
-                ],
-                sounds: [
-                    {
-                        assetId: '83c36d806dc92327b9e7049a565c6bff',
-                        name: translator(messages.meow),
-                        dataFormat: 'wav',
-                        format: '',
-                        rate: 22050,
-                        sampleCount: 18688,
-                        md5ext: '83c36d806dc92327b9e7049a565c6bff.wav'
-                    }
-                ],
-                volume: 100,
-                visible: true,
-                x: 0,
-                y: 0,
-                size: 100,
-                direction: 90,
-                draggable: false,
-                rotationStyle: 'all around'
             }
         ],
         meta: {

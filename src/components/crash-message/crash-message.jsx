@@ -15,15 +15,14 @@ const CrashMessage = props => (
             />
             <h2>
                 <FormattedMessage
-                    defaultMessage="Oops! Something went wrong."
+                    defaultMessage="Trade Route Simulator has crashed."
                     description="Crash Message title"
                     id="gui.crashMessage.label"
                 />
             </h2>
             <p>
                 <FormattedMessage
-                    defaultMessage="We are so sorry, but it looks like Scratch has crashed. This bug has been
-                        automatically reported to the Scratch Team. Please refresh your page to try
+                    defaultMessage="Trade Route Simulator has crashed. Please refresh your page to try
                         again."
                     description="Message to inform the user that page has crashed."
                     id="gui.crashMessage.description"
