@@ -35,7 +35,8 @@
 
 .editor-wrapper {
     flex-basis: 600px;
-    flex-grow: 1;
+
+    flex-grow: 0.5; /*CHANGED FLEX-GROW HERE FROM 1 TO MAKE THE EDITING AREA SMALLER*/
     flex-shrink: 0;
     position: relative;
 
@@ -193,6 +194,11 @@
         goes to full vertical height of the window
     */
     display: flex;
+
+
+    /*PUT FLEX-GROW HERE IF YOU WANT THE AREA BELOW STAGE TO BE BIGGER*/
+    flex-grow: 1.2;
+
     flex-direction: column;
     /* pad entire wrapper to the left and right; allow children to fill width */
     padding-left: $space;
@@ -201,17 +207,17 @@
 
 .stage-and-target-wrapper.large {
     /* Fix the max width to max large stage size (defined in layout_constants.js) + gutter size */
-    max-width: calc(480px + calc($space * 2));
+    max-width: calc(600px + calc($space * 2));
 }
 
 .stage-and-target-wrapper.large-constrained {
     /* Fix the max width to max largeConstrained stage size (defined in layout_constants.js) + gutter size */
-    max-width: calc(408px + calc($space * 2));
+    max-width: calc(528px + calc($space * 2));
 }
 
 .stage-and-target-wrapper.small {
     /* Fix the max width to max small stage size (defined in layout_constants.js) + gutter size */
-    max-width: calc(240px + calc($space * 2));
+    max-width: calc(360px + calc($space * 2));
 }
 
 .target-wrapper {

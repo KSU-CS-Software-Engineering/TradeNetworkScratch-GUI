@@ -100,7 +100,7 @@ const SpriteSelectorComponent = function (props) {
                 onChangeY={onChangeSpriteY}
             />
 
-            <Box className={styles.scrollWrapper}>
+            {/* <Box className={styles.scrollWrapper}>
                 <SpriteList
                     editingTarget={editingTarget}
                     hoveredTarget={hoveredTarget}
@@ -114,7 +114,7 @@ const SpriteSelectorComponent = function (props) {
                     onSelectSprite={onSelectSprite}
                 />
             </Box>
-            {/* <ActionMenu
+            <ActionMenu
                 className={styles.addButton}
                 img={spriteIcon}
                 moreButtons={[
