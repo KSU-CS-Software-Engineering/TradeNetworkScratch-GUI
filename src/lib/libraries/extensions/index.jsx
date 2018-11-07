@@ -9,6 +9,7 @@ import microbitImage from './microbit.png';
 import ev3Image from './ev3.png';
 import wedoImage from './wedo.png';
 import text2speechImage from './text2speech.png';
+import gandhiNuke from './gandhiNuke.png';
 
 import microbitPeripheralImage from './peripheral-connection/microbit/microbit-illustration.svg';
 import microbitMenuImage from './peripheral-connection/microbit/microbit-small.svg';
@@ -17,6 +18,7 @@ import ev3MenuImage from './peripheral-connection/ev3/ev3-small.svg';
 import wedoPeripheralImage from './peripheral-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
+
 
 export default [
     {
@@ -203,12 +205,31 @@ export default [
             />
         ),
         extensionId: 'test',
-        iconURL: text2speechImage,
+        iconURL: gandhiNuke,
         description: (
             <FormattedMessage
                 defaultMessage="Testing my ability to code"
                 description="Description for the test extension"
                 id="gui.extension.test.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Zach's Dictionary"
+                description="Name for my dictionary extension"
+                id="gui.extension.dictionary.name"
+            />
+        ),
+        extensionId: 'dictionary',
+        iconURL: gandhiNuke,
+        description: (
+            <FormattedMessage
+                defaultMessage="Use dictionaries in Scratch"
+                description="Description for the test extension"
+                id="gui.extension.dictionary.description"
             />
         ),
         featured: true
