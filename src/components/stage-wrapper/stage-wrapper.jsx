@@ -28,7 +28,7 @@ const StageWrapperComponent = function (props) {
                 {
                     isRendererSupported ?
                         <Stage
-                            stageSize={stageSize}
+                            // stageSize={stageSize}
                             vm={vm}
                         /> :
                         null
