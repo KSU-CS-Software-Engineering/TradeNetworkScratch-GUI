@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
+import {FormattedDate, FormattedMessage} from 'react-intl';
 
 import musicImage from './music.png';
 import musicInsetImage from './music-small.svg';
@@ -26,6 +26,46 @@ import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
 
 export default [
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Graph"
+                description="Name for the 'Graph' extension"
+                id="gui.extension.graph.name"
+            />
+        ),
+        extensionId: 'graph',
+        iconURL: musicImage,
+        insetIconURL: penInsetImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Store things in a graph"
+                description="Description for the graph extension"
+                id="gui.extension.graph.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Dictionary"
+                description="Name for the 'Dictionary' extension"
+                id="gui.extension.dictionary.name"
+            />
+        ),
+        extensionId: 'dictionary',
+        iconURL: wedoPeripheralImage,
+        insetIconURL: musicInsetImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Store things in a dictionary"
+                description="Description for the dictionary extension"
+                id="gui.extension.dictionary.description"
+            />
+        ),
+        featured: true
+    },
     {
         name: (
             <FormattedMessage
